@@ -9,6 +9,7 @@ class Solution {
             return;
         }else if(board[i][move-1] != 0){
             checkStack(board[i][move-1]);
+            board[i][move-1] = 0;
             return;
         }
         method(move, ++i);
@@ -18,6 +19,7 @@ class Solution {
         if(!stack.empty() && stack.peek() == element){
             stack.pop();
             disappeared += 2;
+            
         }else{
             stack.push(element);
         }
