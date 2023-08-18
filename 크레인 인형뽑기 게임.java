@@ -1,27 +1,23 @@
-
+import java.util.*;
 class Solution {
+    private static int[][] board;
+    private static Stack<Integer> stack;
+    private static int disappeared = 0;
+    
+    private void method(int move){
+        
+    }
     public int solution(int[][] board, int[] moves) {
-        int answer = 0;
-        int a = 0;
-        int b = 0;
-        int[] c = new int[moves.length];
-        for(int z = 0; z < moves.length ;z++ )
-            {   for(int y = 0; y < board.length; y++)
-                {   if(board[moves[z]] != 0])
-                    {   b = board[y][moves[z]];
-                        break;
-                    }   
-                }    
-                if( a != b){
-                    c[z] = 0;
-                    a = ;
-                }
-                else{
-                    a = b;
-                }
-                
-            }
-
+        this.board = board;
+        for(int move : moves){
+            method(move);
+        }
+        int answer = disappeared;
         return answer;
     }
 }
+//private 으로 int[][] board , Stack stack 선언(클래스변수)
+//(moves[i]) 로 매소드 호출
+//moves[]
+//board에서
+//moves
