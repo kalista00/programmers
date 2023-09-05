@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 class Solution {
     public int[][] solution(int n) {
         ArrayList<int[]> list = new ArrayList<>();
