@@ -1,22 +1,19 @@
-import java.util.*;
-import java.util.stream.*;
+import java.util.Stack;
 
-class Solution{
-    private int answer = 0;
-    
-    private void method(Stack<Character> stack){
-        
-    }
-    
-    public int solution(String s){
+class Solution {
+    public int solution(String s) {
         Stack<Character> stack = new Stack<>();
-        char[] toChar = s.toCharArray();
-        IntStream.range(0, toChar.length)
-            .mapToObj(i -> toChar[i])
-            .forEach(stack::push);
-        method(stack);
-
         
-        return answer;
+        for (char c : s.toCharArray()) {
+            if (!stack.isEmpty() && stack.peek() == c) {
+                stack.pop(); // 짝을 이루는 문자 제거
+            } else {
+                stack.push(c); // 스택에 문자 추가
+            }
+        }
+        
+        // 남은 문자가 없으면 1, 있으면 0 반환
+        return stack.isEmpty() ? 1 : 0;
     }
 }
+
