@@ -14,3 +14,4 @@ class Solution {
     }
 
 }
+//다른방식도 풀어보기
