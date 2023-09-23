@@ -27,3 +27,5 @@ function solution(people, limit) {
 
   return boat;
 }
+
+//shift() 는 배열의 첫번째 요소를 제거하고 제거한 값을 반환함
